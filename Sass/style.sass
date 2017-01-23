@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Open+Sans:300,400,600,700,800&subset=latin-ext')
+@import url('https://fonts.googleapis.com/css?family=Cormorant:400,400i,500&subset=latin-ext');
+
+body 
+	margin: 0
+	font-family: 'Open Sans', sans-serif
+	position: relative
+	
+.bottom-offset
+	margin-bottom: 70px
+
+.overflow
+	overflow: hidden
+	
+.icons
+	font-size: 17px
+	font-weight: bold
+	width: 35px
+	height: 35px
+	text-align: center
+	line-height: 35px
+	transition: 0.15s
+	&:hover
+		cursor: pointer
+		transform: scale(1.2)
+
+$white: #FFF
+$red: #E84545
+$transparent: transparent
+$relative: relative
+$absolute: absolute
+$center: center
+
+/*-------------Menu-------------*/
+
+.menu-style
+	background-color: $transparent
+	padding-top: 20px
+
+	.container
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+		background-color: rgba(44, 47, 73, 0.7)
+
+	.navbar-brand
+		font-size: 2em
+		font-weight: 100
+		color: $white                        
+
+		span
+			font-weight: bold
+			color: #66697E
+
+.navbar-inverse
+	border-bottom: none
+
+	.navbar-nav
+		li 
+			padding-right: 10px
+			font-size: 0.8em
+			text-align: $center
+		 
+			a
+				color: rgba(255, 255, 255, 0.9)
+				font-size: 12px
+				font-weight: 600
+				transition: 0.2s
+				text-align: center
+				margin-right: 0
+				&:hover,
+				&:focus
+					background-color: rgba(0, 245, 175, 0.8)
+
+		.active
+			a
+				background-color: rgba(0, 245, 175, 0.8)
+				&:hover
+					background-color: rgba(0, 245, 175, 0.8)
+
+
+
+/*-------------Jumbotron-------------*/
+
+.jumbotron
+	min-height: 670px
+	background: url(https://images.pexels.com/photos/27665/pexels-photo-27665.jpg?h=350&auto=compress) center/cover no-repeat
+	position: $relative
+	padding-top: 0
+
+	.layer
+		position: $absolute
+		width: 100%
+		height: 100%
+		background-color: rgba(44, 47, 73, 0.9)
+
+	.centered 
+		position: $absolute
+		top: 30%
+		left: 15%
+		right: 15%
+		bottom: 2
+		color: $white
+		text-align: $center
+		font-weight: 700
+
+	.button
+		text-transform: uppercase
+		letter-spacing: 1px
+		font-weight: 700
+		outline: none
+		position: relative
+		transition: all 0.3s
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			z-index: -1
+			transition: all .3s
+		&:before
+			line-height: 1
+			position: relative
+
+	.btn-1
+		background: $red
+		color: #fff
+		font-weight: 400
+		margin-top: 60px
+		padding: 15px 55px
+		border-radius: 2px
+		font-size: 12px
+		overflow: hidden
+		backface-visibility: hidden
+		&:active
+			background: #9053a9
+			top: 2px
+		&:before
+			position: absolute
+			height: 100%
+			width: 100%
+			line-height: 2.5
+			font-size: 180%
+			transition: all 0.3s
+		&:active:before
+			color: #703b87
+
+		span
+			display: inline-block
+			width: 100%
+			height: 100%
+			transition: all 0.3s
+
+	.btn-1a
+		&:hover
+			animation: down .3s
+			span
+  			transform: translateY(300%)
+		&:before
+		  left: 0
+		  top: -100%
+		&:hover:before
+		  top: 0
+
+	.arrow-down
+		&:before
+			font-family: "FontAwesome"
+			content: "\f063"
+			z-index: 2
+
+/*------------About------------*/
+
+.about 
+	i
+		color: $red
+		margin: 60px 0 20px
+
+	h4
+		margin-bottom: 20px
+		font-weight: bold
+
+	p
+		color: rgba(0, 0, 0, 0.5)
+		padding: 0 20px
+
+/*------------Gallery------------*/
+
+.gallery
+	[class*="col-"] 
+		height: 250px
+		position: relative
+		&:hover
+			transform: translate3d(0, 0, -200px)
+
+	.col-1
+		background: url(https://www.actionwellness.org/wp-content/uploads/2016/02/donate-stuff-e1465492434162.jpg) center/cover no-repeat
+
+	.col-2
+		background: url(http://blog.younityworld.com/wp-content/uploads/2014/12/5-sposob%C3%B3w-na-oszcz%C4%99dzanie-na-zakupach_younity-world-blog-660x330.jpg) center/cover no-repeat	
+
+	.col-3
+		background: url(https://images.pexels.com/photos/1809/photographer-photography-vintage-black.jpg?h=350&auto=compress) center/cover no-repeat	
+
+	.col-4
+		background: url(http://www.alivemag.com/wp-content/uploads/2014/11/WellCrafted2.jpg) center/cover no-repeat	
+	
+	.col-5
+		background: url(http://www.martynabanasiak.pl/wp-content/uploads/2013/11/miarki-370x340.jpg) center/cover no-repeat	
+
+	.col-6
+		background: url(http://itkontekst.pl/images/tools.jpg) center/cover no-repeat	
+
+	.col-7
+		background: url(https://pagezii.com/blog/wp-content/uploads/2016/12/Jillian-Wood-Influitive-Interview-Pagezii-366x300.jpg) center/cover no-repeat	
+
+	.col-8
+		background: url(http://gold-catering.pl/wp-content/uploads/2016/06/catering_na_konferencje_2.jpg) center/cover no-repeat	
+	
+	.layer 
+		background-color: rgba(232, 69, 69, 0)
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		transition: 0.3s
+
+		&:hover
+			background-color: rgba(232, 69, 69, 0.85)
+			cursor: pointer
+
+		&:hover p:last-child
+			color: rgba(255, 255, 255, 0.8)
+
+		&:hover p:first-child 
+			color: $white
+
+	.description 
+		p
+			font-size: 0.8em
+			color: rgba(255, 255, 255, 0)	
+
+			&:first-child
+				font-weight: bold	
+		
+/*-------------Team-------------*/
+
+.height
+	height: 300px
+	overflow: hidden
+
+.team
+	[class*="team-"]
+		height: 300px
+		width: 100%
+		transition: 0.4s
+		&:hover
+			height: 320px
+			border-radius: 10%
+
+.team-1
+	background: url(https://pixelbuddha.net/lifepreview/activebox/images/team-1.jpg) center/cover repeat	
+
+.team-2
+	background: url(https://pixelbuddha.net/lifepreview/activebox/images/team-2.jpg) center/cover no-repeat
+
+.team-3
+	background: url(http://activebox.neocities.org/team-3.jpg) center/cover no-repeat
+
+.team-4
+	background: url(https://pixelbuddha.net/lifepreview/activebox/images/team-4.jpg) center/cover no-repeat
+
+.name
+	h3
+		color: rgba(0, 0, 0, 0.7)
+		margin-top: 35px
+	p
+		color: $red
+
+.characteristics
+	color: rgba(0, 0, 0, 0.6)
+
+.social
+	margin-top: 20px	
+
+	i.fa
+		@extend .icons
+		color: rgba(0, 0, 0, 0.2)
+		border: 1px solid rgba(0, 0, 0, 0.1)
+		&:first-child:hover
+			background-color: #4867AA
+			color: $white
+		&:nth-child(2):hover
+			background-color: $white
+			color: #1DA1F2
+		&:last-child:hover
+			background-color: $white
+			color: #0177B5
+
+/*------------Quotes-------------*/
+
+.quotes
+	.picture
+		background: url(http://mamstartup.pl/i/articles/8052_620_0_1_91b2cadbba__kobieta632x348.jpg) center/cover no-repeat
+		height: 350px
+
+	.carousel 
+		background-color: #53354A
+		height: 350px
+
+	.slide
+		position: relative
+
+	.carousel-indicators
+		position: absolute
+		bottom: 7%
+		left: 38%
+
+		li
+			background-color: #755D6E
+			border: none
+
+		li.active
+			background-color: $white
+
+.carousel-inner
+	display: flex
+	justify-content: center
+	align-items: center
+
+	.item
+		p
+			color: $white
+			padding: 30px 200px 60px 30px
+			font-size: 2em
+			font-family: Cormorant, serif
+			font-weight: 400
+
+			small
+				font-size: 10px
+
+
+/*-----------Download--------------*/
+
+.download
+	p
+		font-size: 0.7em
+		font-weight: bold
+		margin-bottom: 30px
+
+	button
+		background-color: $red
+		color: $white
+		font-size: 0.7em
+		padding: 10px 70px
+		border-radius: 0
+		transition: 0.3s
+
+		&:hover
+			font-weight: bold
+			color: $white
+			letter-spacing: 3px
+
+
+/*--------------Contact----------------*/
+
+.contact
+	background-color: #3A3E64
+	padding-top: 50px
+
+	[class*="col-"]
+		margin-bottom: 30px
+
+	p.lead
+		font-size: 0.8em
+		color: $white
+		margin-bottom: 10px
+
+	p
+		color: rgba(255, 255, 255, 0.3)
+
+	i.fa
+		@extend .icons
+		color: $white
+		border: 1px solid $white
+
+		&:hover
+			background-color: $red
+
+/*-------------Footer-----------*/
+
+footer
+	background-color: #313454
+	color: #7C7C7D
+	padding: 20px 0
+
+	i.fa
+		color: $red
+
+	span
+		color: $white
+
+/*------------Media queries-------------*/
+
+@media (max-width: 1296px)
+
+	.carousel-inner
+		.item
+			p
+				padding-right: 100px
+
+@media (max-width: 1151px)
+
+	.centered
+		h1
+			font-size: 3em
+
+		p
+			font-size: 1em
+
+@media (max-width: 1096px)
+	
+	.carousel-inner
+		.item
+			p
+				font-size: 2em
+				padding-right: 10px
+				padding-left: 10px
+
+
+@media (max-width: 991px)
+
+	.team
+		[class*="team-"]
+			width: 50%
+			margin: 0 auto
+
+		.name
+			text-align: center
+
+		.social
+			text-align: center
+			margin-bottom: 30px
+
+
+@media (max-width: 767px)
+	
+	.navbar-inverse
+		.navbar-nav
+			li 
+				padding-right: 0
+
+		.navbar-toggle
+			background-color: rgba(0, 245, 175, 0.8)
+			transition: 0.2s
+			&:hover,
+			&:focus,
+			&:checked
+				transform: scale(1.2)
+				transform: perspective(200px) rotateY(-40deg)
+				background-color: rgba(0, 245, 175, 0.8)
+
+	.menu-style
+		li
+			background-color: rgba(44, 47, 73, 0.9)
+			text-align: center
+
+	.gallery
+		width: 70%
+		margin-left: 15%
+		margin-right: 15%
+
+		[class*="col-xs-"]
+			margin-bottom: 10px
+	
+
+@media (max-width: 479px)
+
+	.carousel-indicators
+		top: 90%
+
+@media (max-width: 465px)
+
+	.centered
+		h1
+			font-size: 2.5em
+
+		p
+			font-size: 1em
+
+	.gallery
+		width: 100%		
+		margin: 5px 0
+
+	.team
+		[class*="team-"]
+			width: 100%
+			
+
+@media (max-width: 390px)
+
+	.jumbotron
+		height: 650px
+
+		.centered
+			button
+				margin-top: 0
+
+@media (max-width: 369px)
+	
+	.quotes
+		.picture
+			background: url(http://mamstartup.pl/i/articles/8052_620_0_1_91b2cadbba__kobieta632x348.jpg) right/cover no-repeat
+			height: 350px
+
+	.carousel-inner
+		.item
+			p
+				font-size: 1.63em
+
+@media (max-width: 300px)
+	
+	.download
+		button
+			&:hover
+				font-weight: bold
+				color: $white
+				letter-spacing: 1px

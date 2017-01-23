@@ -1,0 +1,25 @@
+{
+  "name": "7.7",
+  "version": "1.0.0",
+  "description": "Additional excercise",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JarekBorzecki/Modul-7.7.git"
+  },
+  "author": "Jaroslaw Borzecki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JarekBorzecki/Modul-7.7/issues"
+  },
+  "homepage": "https://github.com/JarekBorzecki/Modul-7.7#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
